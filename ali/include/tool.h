@@ -25,6 +25,7 @@ struct tool final {
     template <typename T>
     static T random(const std::vector<T>& vec)
     {
+        if(vec.size() == 0) return T();
         return vec[tool::random_int(0, vec.size() - 1)];
     }
 
